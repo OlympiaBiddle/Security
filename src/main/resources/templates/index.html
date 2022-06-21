@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www/thymeleaf.org"
+xmlns:sec="http://www/thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Home - Mornings With Us</title>
+
+   <!-- font awesome cdn link-->  
+  
+   <link rel="stylesheet" type="text/css" href="../fontAwesome/all.css">
+  
+   <!-- custom css file link  -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+</head>
+<body>
+   
+<header class="header">
+
+   <section class="flex">
+
+      <a th:href="@{index.html}" class="logo">Mornings With Us</a>
+
+      <nav class="navbar">
+         <a th:href="@{index}">home</a>
+         <a th:href="@{about}">about</a>
+         <a th:href="@{menu}">menu</a>
+         <a th:href="@{orders}">orders</a>
+         <a th:href="@{contact}">contact</a>
+      </nav>
+
+      <div class="icons">
+         <a th:href="@{search}"><i class="fas fa-search"></i></a>
+         <a th:href="@{cart}"><i class="fas fa-shopping-cart"></i><span>(0)</span></a>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="menu-btn" class="fas fa-bars"></div>
+      </div>
+
+      <div class="profile">
+         <p sec:authentication="principal.username">Placeholder </p>
+         <div class="flex">
+            <a th:href="@{profile}" class="btn">profile</a>
+            <a th:href="@{/logout}" class="delete-btn">logout</a>
+         </div>
+         
+      </div>
+
+   </section>
+
+</header>
+
+<section class="home">
+
+    <div class="swiper home-slider">
+ 
+       <div class="swiper-wrapper">
+ 
+          <div class="swiper-slide slide">
+             <div class="content">
+                <span>order from menu</span>
+                <h3>french toast platter</h3>
+                <a th:href="@{menu}" class="btn">menu</a>
+             </div>
+             <div class="image">
+                <img th:src="@{/images/traditional-breakfast.jpg}" alt="">
+             </div>
+          </div>
+       <div class="swiper-pagination"></div>
+ 
+    </div>
+ 
+ </section>
+
+<!-- footer -->
+
+<footer class="footer">
+
+    <section class="box-container">
+
+        <div class="box">
+            <table>
+                <tr>
+                    <th scope="row" colspan="2">
+                        <h3>Hours of Operations</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <td>Mon-Fri</td>
+                    <td>6am-12pm</td>
+                </tr>
+                <tr>
+                    <td>Sat-Sun</td>
+                    <td>8am-1pm</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="box">
+            <p>
+            <h3> Location:</h3>
+            </p>
+            <p>1001 Broad Street</p>
+            <p>Philadelphia, PA 19107</p>
+            <p>(P): 215-XXX-XXXX</p>
+        </div>
+
+        <div class="box">
+            <h3>Follow us on: </h3>
+              
+            <a th:href="@{https://www.facebook.com}" class="fa-brands fa-facebook"></a>
+            <a th:href="@{https://www.twitter.com}" class="fa-brands fa-twitter"></a>
+            <a th:href="@{https://www.linkedin.com}" class="fa-brands fa-linkedin"></a>
+        
+        </div>
+
+    </section>
+
+    <div class="credit"> <span>Olympia Biddle</span> @ 2022  - PerSchola Capstone!</div>
+
+</footer>
+ 
+ 
+ <script th:src="@{/js/script.js}"></script>
+  
+</body>
+</html>
+

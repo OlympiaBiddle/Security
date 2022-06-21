@@ -1,0 +1,21 @@
+create table products(
+id int auto_increment,
+name varchar(256) not null,
+description varchar(256) not null,
+category varchar(35) not null,
+image_path varchar(256) unique,
+price double(5,2),
+primary key(id)
+ );
+
+
+
+insert into products(id, name, description, category, image_path, price) values(1, 'Turkey Bacon', '3 strips of turkey bacon','side','\\images\\turkey-bacon.avif', 3.29);
+insert into products(id, name, description, category, image_path, price) values(2, 'French Toast Platter', '3 pc French Toast w/choice of eggs and meat','platter','\\images\\traditional-breakfast.jpg', 10.99);
+insert into products(id, name, description, category, image_path, price) values(3, 'Iced coffee', '16oz of Coffee','drinks','\\images\\Iced-Coffe.avif', 3.99);
+insert into products(id, name, description, category, image_path, price) values(4, 'Hash Browns', '2pc shredded hash browns','sides','\\images\\hashbrowns.webp', 2.59);
+insert into products(id, name, description, category, image_path, price) values(5, 'Ham and Steak Omelette', 'Ham and Steak omelette cooked to perfection','sides','\\images\\ham-steak-omelette.avif', 8.99);
+insert into products(id, name, description, category, image_path, price) values(6, 'Green Machine', '12oz of freshly squeeze apple, kale, lemon, honey, kale','drinks','\\images\\apple-cucumber-kale-green-juice.avif', 6.29);
+insert into products(id, name, description, category, image_path, price) values(7, 'Coffee', '8oz of freshley brew coffee','drinks','\\images\\cup-of-coffee.jpg', 1.79);
+insert into products(id, name, description, category, image_path, price) values(8, 'All American Platter', 'Stack of pancakes w/choice of egg and w/2 meats','platter','\\images\\all-american.avif', 16.99);
+insert into products(id, name, description, category, image_path, price) values(9, 'Pancakes with Berries', 'Stack of pancakes w/ topping and choice of meat','platter','\\images\\panckakes-berries.avif', 12.99);

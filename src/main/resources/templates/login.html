@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www/thymeleaf.org">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Login - Mornings With Us</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" type="text/css" href="../fontAwesome/all.css"/>
+
+   
+   <!-- custom css file link  -->
+   <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+</head>
+<body>
+   
+<header class="header">
+
+   <section class="flex">
+
+      <a th:href="@{index}" class="logo">Mornings With Us</a>
+
+      <nav class="navbar">
+         <a th:href="@{index}">home</a>
+         <a th:href="@{about}">about</a>
+         <a th:href="@{menu}">menu</a>
+         <a th:href="@{orders}">orders</a>
+         <a th:href="@{contact}">contact</a>
+      </nav>
+
+
+   </section>
+
+</header>
+  <br>
+  <br>
+
+  <!-- forms  -->
+<section class="form-container">
+
+        <form th:action="@{/login}" method="post">
+            <h3>login now</h3>
+            <div th:if="${param.error}">
+                <div class="alert alert-danger">Invalid username or
+                   password.</div>
+             </div>
+             <div th:if="${param.logout}">
+                <div class="alert alert-info">You have been logged out.</div>
+             </div>
+            <input type="text"  name="username" id="username" placeholder="enter your email" class="box">
+            <input type="password"  name="password" id="password" placeholder="enter your password" class="box">
+            <input type="submit" value="log In" id="login-submit" class="btn" name="login-submit">
+            <p>New user? <a href="/" th:href="@{/registration}">Register
+                      here</a></p>
+        </form>
+
+    </section>
+    
+  <!-- footer -->
+
+<footer class="footer">
+
+    <section class="box-container">
+
+        <div class="box">
+            <table>
+                <tr>
+                    <th scope="row" colspan="2">
+                        <h3>Hours of Operations</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <td>Mon-Fri</td>
+                    <td>6am-12pm</td>
+                </tr>
+                <tr>
+                    <td>Sat-Sun</td>
+                    <td>8am-1pm</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="box">
+            <p>
+            <h3> Location:</h3>
+            </p>
+            <p>1001 Broad Street</p>
+            <p>Philadelphia, PA 19107</p>
+            <p>(P): 215-XXX-XXXX</p>
+        </div>
+
+        <div class="box">
+            <h3>Follow us on: </h3>
+            <a th:href="@{https://www.facebook.com}" class="fa-brands fa-facebook"></a>
+            <a th:href="@{https://www.twitter.com}" class="fa-brands fa-twitter"></a>
+            <a th:href="@{https://www.linkedin.com}" class="fa-brands fa-linkedin"></a>
+        </div>
+
+    </section>
+
+    <div class="credit">by <span>Olympia Biddle</span> @ 2022  | PerSchola Capstone!</div>
+
+</footer>
+  
+  
+  <script type="text/javascript"
+     th:src="@{https://cdn.jsdelivr.net/webjars/org.webjars/jquery/3.2.1/jquery.min.js/}"></script>
+  <script type="text/javascript"
+     th:src="@{https://cdn.jsdelivr.net/webjars/org.webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+
+
+</body>
+</html>
+
