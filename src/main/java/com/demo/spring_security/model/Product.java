@@ -15,7 +15,7 @@ import javax.persistence.Table;
 public class Product {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 
 	@Column(unique = true, length = 256, nullable = false)
@@ -35,6 +35,15 @@ public class Product {
 	public Product() {
 		super();
 	}
+	
+	
+
+	public Product(Integer id) {
+	
+		this.id = id;
+	}
+
+
 
 	public Product(String name, String description, String category, String image_path, float price) {
 		super();

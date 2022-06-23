@@ -8,7 +8,7 @@ public class User {
 
    @Id
    @GeneratedValue(strategy = GenerationType.AUTO)
-   private Long id;
+   private Integer id;
 
    private String firstName;
    private String lastName;
@@ -26,8 +26,16 @@ public class User {
 
    public User() {
    }
+   
+   
 
-   public User(String firstName, String lastName, String email, String password) {
+   public User(Integer id) {
+	this.id = id;
+}
+
+
+
+public User(String firstName, String lastName, String email, String password) {
        this.firstName = firstName;
        this.lastName = lastName;
        this.email = email;
@@ -42,11 +50,11 @@ public class User {
        this.roles = roles;
    }
 
-   public Long getId() {
+   public Integer getId() {
        return id;
    }
 
-   public void setId(Long id) {
+   public void setId(Integer id) {
        this.id = id;
    }
 

@@ -58,14 +58,19 @@
  
     <div class="box-container" >
  
-       <form accept="" method="post" class="box" th:each="product : ${products}">
+       <form action="/addToCart" method="POST" class="box" th:each="product : ${products}">
           <button class="fas fa-shopping-cart" type="submit" name="add_to_cart"></button>
           <img th:attr="src=@{${product.image_path}}" alt="">
           <a th:href="@{category}" class="cat" th:text="${product.category}"></a>
           <div class="name" th:text="${product.name}"></div>
+          <input type="hidden" name="id" th:value =${product.id} />
           <div class="flex"><span>$</span>
              <div class="price" th:text="${product.price}"></div>
-             <input type="number" name="qty" class="qty" min="1" max="4" value="1" onkeypress="if(this.value.length == 2) return false;">
+               <select id ="qty" name = "qty" class="qty">
+               <option value ="1">1</option>
+               <option value ="2">2</option>
+               <option value ="3">3</option>
+               </select>
           </div>
        </form>
     </div>

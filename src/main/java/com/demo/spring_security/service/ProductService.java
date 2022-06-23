@@ -1,15 +1,13 @@
 package com.demo.spring_security.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import java.util.List;
+import java.util.Optional;
 
-import com.demo.spring_security.repository.ProductRepository;
+import com.demo.spring_security.model.Product;
 
+public interface ProductService {
 
-@Service
-public class ProductService {
 	
-	@Autowired
-	private ProductRepository productRepository;
-
+	public Iterable<Product> findAll();
+	
 }
