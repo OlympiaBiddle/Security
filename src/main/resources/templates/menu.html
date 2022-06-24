@@ -16,7 +16,7 @@
 
    <section class="flex">
 
-      <a th:href="@{index.html}" class="logo">Mornings With Us</a>
+      <a th:href="@{index}" class="logo">Mornings With Us</a>
 
       <nav class="navbar">
          <a th:href="@{index}">home</a>
@@ -67,9 +67,9 @@
           <div class="flex"><span>$</span>
              <div class="price" th:text="${product.price}"></div>
                <select id ="qty" name = "qty" class="qty">
-               <option value ="1">1</option>
-               <option value ="2">2</option>
-               <option value ="3">3</option>
+               <option th:value ="'1'" th:text="1">1</option>
+               <option th:value ="'2'" th:text="2">2</option>
+               <option th:value ="'3'" th:text="3">3</option>
                </select>
           </div>
        </form>

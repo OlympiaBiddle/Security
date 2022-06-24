@@ -2,7 +2,10 @@ package com.demo.spring_security.controller;
 
 
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,19 +19,23 @@ public class MainController {
 	@Autowired
 	private UserService userService;
 	
-//    @GetMapping("/")
-//    public String root() {
-//        //return "index";
-//    	System.out.println("IN  MainController->root()");
-//    	User existing = userService.
-//    	System.out.println("User firstName="+existing.getFirstName());
-//        return "redirect:/students";
-//    }
-
-    @GetMapping("/index")
-    public String root(Model model) {
+	@GetMapping("/index")
+    public String root(HttpSession session,Authentication authentication) {
+        //return "index";
+    	//System.out.println("IN  MainController->root()");
+    	System.out.println(">>>>>>>USER ="+authentication.getName());
+    	User existing = userService.findByEmail(authentication.getName());
+    	System.out.println("User firstName="+existing.getFirstName());
+    	System.out.println("User lastName="+existing.getLastName());
+    	System.out.println("User Id="+existing.getId());
+    	
         return "index";
     }
+
+//    @GetMapping("/index")
+//    public String root(Model model) {
+//        return "index";
+//    }
 
     @GetMapping("/login")
     public String login(Model model) {
