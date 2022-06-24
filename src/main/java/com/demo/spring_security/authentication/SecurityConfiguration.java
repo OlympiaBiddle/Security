@@ -14,7 +14,7 @@ import com.demo.spring_security.service.UserService;
 
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
-// We will create userService class in upcoming step
+
    @Autowired
    private UserService userService;
 
@@ -40,7 +40,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                        .invalidateHttpSession(true)
                        .clearAuthentication(true)
                        .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                       .logoutSuccessUrl("/login?logout")
+                       .logoutSuccessUrl("/login?logout")//User logouts and is returned to login page
                .permitAll();
    }
 

@@ -23,11 +23,11 @@ public class CartController {
 	private UserService userService;
 
 	
-	@PostMapping("/addToCart")
-	public String addProduct(Model model, @RequestParam("pId") Integer productId,
-			@RequestParam("quantity") int quantity, HttpServletRequest request) {
-
-		return "";
-	}
+//	@PostMapping("/addToCart")
+//	public String addProduct(Model model, @RequestParam("pId") Integer productId,
+//			@RequestParam("quantity") int quantity, @Request {
+//
+//		return "";
+//	}
 
 }

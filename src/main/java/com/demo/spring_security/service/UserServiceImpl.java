@@ -17,9 +17,11 @@ import com.demo.spring_security.model.User;
 import com.demo.spring_security.repository.UserRepository;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl implements UserService {	
 
-   @Autowired
+	private User user = new User();
+
+@Autowired
    private UserRepository userRepository;
 
    @Autowired
@@ -30,13 +32,17 @@ public class UserServiceImpl implements UserService {
    }
 
    public User save(UserRegistrationDto registration){
-       User user = new User();
+       //User user = new User();
        user.setFirstName(registration.getFirstName());
        user.setLastName(registration.getLastName());
        user.setEmail(registration.getEmail());
        user.setPassword(passwordEncoder.encode(registration.getPassword()));
        user.setRoles(Arrays.asList(new Role("ROLE_USER")));
        return userRepository.save(user);
+   }
+  
+   public  String getLastName() {
+	   return user.getLastName();
    }
 
    @Override
@@ -55,4 +61,7 @@ public class UserServiceImpl implements UserService {
                .map(role -> new SimpleGrantedAuthority(role.getName()))
                .collect(Collectors.toList());
    }
+   
+   
+
 }

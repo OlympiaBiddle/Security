@@ -1,5 +1,6 @@
 package com.demo.spring_security;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
@@ -11,6 +12,7 @@ import org.springframework.test.annotation.Rollback;
 
 import com.demo.spring_security.model.User;
 import com.demo.spring_security.repository.UserRepository;
+import com.demo.spring_security.service.UserService;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = Replace.NONE)
@@ -20,24 +22,25 @@ public class UserRepositoryTests {
 	@Autowired
 	private UserRepository repo;
 	
-	@Test
-	private void testCreatUser() {
-		User userMom = new User();
-		userMom.setFirstName("Ethel");
-		userMom.setLastName("Biddle");
-		userMom.setEmail("ebiddle@hotmail.com");
-		userMom.setPassword("rip012021");
-		
-		User savedUser = repo.save(userMom);
-		//determines if the user was saved
-		assertTrue(savedUser.getId() > 0);
-	}
+	@Autowired
+	private UserService service;
 	
-//	private void testUpdateUserDetails() {
-//		User userMom = repo.findByEmail("ebiddle@hotmail.com");
-//		userMom.setLastName("Jones");
+//	@Test
+//	private void testCreatUser() {
+//		User userMom = new User();
+//		userMom.setFirstName("Ethel");
+//		userMom.setLastName("Biddle");
+//		userMom.setEmail("ebiddle@hotmail.com");
+//		userMom.setPassword("rip012021");
 //		
-//		repo.save(userMom);	
-//		assertTrue(userMom.getLastName() == "Jones");	
+//		User savedUser = repo.save(userMom);
+//		//determines if the user was saved
+//		assertTrue(savedUser.getId() > 0);
 //	}
+	
+	@Test
+	private void testUpdateUserDetails() {
+		User user = repo.findByEmail("mikeJones@yahoo.com");
+		System.out.println(user);
+	}
 }

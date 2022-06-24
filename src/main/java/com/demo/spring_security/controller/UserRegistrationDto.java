@@ -4,7 +4,9 @@ import javax.validation.constraints.AssertTrue;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
-
+/*User Registartion Data Transfer object will be
+ * be to transfer the fieldsfrom the
+ *  registration form to the User object */
 @FieldMatch.List({
 		@FieldMatch(first = "password", second = "confirmPassword", message = "The password fields must match"),
 		@FieldMatch(first = "email", second = "confirmEmail", message = "The email fields must match") })
