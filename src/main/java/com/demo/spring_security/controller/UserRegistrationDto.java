@@ -1,6 +1,8 @@
 package com.demo.spring_security.controller;
 
 import javax.validation.constraints.AssertTrue;
+import javax.validation.constraints.Size;
+
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -12,27 +14,34 @@ import org.hibernate.validator.constraints.NotEmpty;
 		@FieldMatch(first = "email", second = "confirmEmail", message = "The email fields must match") })
 public class UserRegistrationDto {
 
-	@NotEmpty
+	/* Annotation 
+	 * @NotEmpty specifies field cannot be empty with custom error message
+	 * @Size specifies the require length*/
+	@NotEmpty(message ="Please enter your first name")
+	@Size(min = 2)
 	private String firstName;
 
-	@NotEmpty
+	@NotEmpty(message ="Please enter your last name")
+	@Size(min = 2)
 	private String lastName;
 
-	@NotEmpty
+	@NotEmpty(message ="Please enter a password")
+	@Size(min = 8, max =20, message="Must be at least 8 characters long")
 	private String password;
 
-	@NotEmpty
+	@NotEmpty(message ="Please confirm password")
+	@Size(min = 8, max =20, message="Must be at least 8 characters long")
 	private String confirmPassword;
 
-	@Email
-	@NotEmpty
+	@Email(message="Enter a valid email")
+	@NotEmpty(message ="Please enter email")
 	private String email;
 
-	@Email
-	@NotEmpty
+	@Email(message="Enter a valid email")
+	@NotEmpty(message ="Please enter email")
 	private String confirmEmail;
 
-	@AssertTrue
+	@AssertTrue(message="Please check to accept")
 	private Boolean terms;
 
 	public String getFirstName() {

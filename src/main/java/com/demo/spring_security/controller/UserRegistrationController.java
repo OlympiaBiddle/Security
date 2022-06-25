@@ -1,6 +1,9 @@
 package com.demo.spring_security.controller;
 
 import javax.validation.Valid;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +19,8 @@ import com.demo.spring_security.service.UserService;
 @Controller
 @RequestMapping("/registration")
 public class UserRegistrationController {
+	
+	private final Logger log = LoggerFactory.getLogger(this.getClass());
 
    @Autowired
    private UserService userService;
@@ -43,6 +48,11 @@ public class UserRegistrationController {
        }
 
        userService.save(userDto);
+       
+     //logger for UserRegistrationController
+     		log.info("Info log statement for Main Controller");
+     		log.warn("Warn log statement for Main Controller");
+     		log.error("Error log statement for Main Controller");
        return "redirect:/registration?success";
    }
 }

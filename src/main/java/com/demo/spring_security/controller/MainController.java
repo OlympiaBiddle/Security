@@ -4,6 +4,8 @@ package com.demo.spring_security.controller;
 
 import javax.servlet.http.HttpSession;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
@@ -15,6 +17,7 @@ import com.demo.spring_security.service.UserService;
 
 @Controller
 public class MainController {
+	private final Logger log = LoggerFactory.getLogger(this.getClass());
 	
 	@Autowired
 	private UserService userService;
@@ -28,6 +31,11 @@ public class MainController {
     	System.out.println("User firstName="+existing.getFirstName());
     	System.out.println("User lastName="+existing.getLastName());
     	System.out.println("User Id="+existing.getId());
+    	
+    	//logger for Main Controller
+		log.info("Info log statement for Main Controller");
+		log.warn("Warn log statement for Main Controller");
+		log.error("Error log statement for Main Controller");
     	
         return "index";
     }
