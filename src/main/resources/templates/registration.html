@@ -47,15 +47,17 @@
 			<p class="error-message" th:if="${#fields.hasGlobalErrors()}"
 				th:each="error : ${#fields.errors('global')}" th:text="${error}">Validation
 				error</p>
-
+		
 			<div class="box"
 				th:classappend="${#fields.hasErrors('firstName')}? 'has-error':''">
 				<input id="firstName" class="form-control" th:field="*{firstName}"
 					placeholder="Enter First Name" />
-				<p class="error-message"
+			 	<p class="error-message"
 					th:each="error: ${#fields.errors('firstName')}" th:text="${error}">Validation
 					error</p>
+					
 			</div>
+			
 			<div class="box"
 				th:classappend="${#fields.hasErrors('lastName')}? 'has-error':''">
 				<input id="lastName" class="form-control" th:field="*{lastName}"

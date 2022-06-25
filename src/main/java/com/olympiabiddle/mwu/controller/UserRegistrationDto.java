@@ -1,4 +1,4 @@
-package com.demo.spring_security.controller;
+package com.olympiabiddle.mwu.controller;
 
 import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.Size;
@@ -18,11 +18,11 @@ public class UserRegistrationDto {
 	 * @NotEmpty specifies field cannot be empty with custom error message
 	 * @Size specifies the require length*/
 	@NotEmpty(message ="Please enter your first name")
-	@Size(min = 2)
+	@Size(min = 2, message="Must be at least 8 characters long")
 	private String firstName;
 
 	@NotEmpty(message ="Please enter your last name")
-	@Size(min = 2)
+	@Size(min = 2, message="Must be at least 8 characters long")
 	private String lastName;
 
 	@NotEmpty(message ="Please enter a password")

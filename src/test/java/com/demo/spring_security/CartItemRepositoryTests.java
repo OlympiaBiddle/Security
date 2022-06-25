@@ -15,10 +15,10 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.annotation.Rollback;
 
-import com.demo.spring_security.model.CartItem;
-import com.demo.spring_security.model.Product;
-import com.demo.spring_security.model.User;
-import com.demo.spring_security.repository.CartItemRepository;
+import com.olympiabiddle.mwu.model.CartItem;
+import com.olympiabiddle.mwu.model.Product;
+import com.olympiabiddle.mwu.model.User;
+import com.olympiabiddle.mwu.repository.CartItemRepository;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = Replace.NONE)

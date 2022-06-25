@@ -1,4 +1,4 @@
-package com.demo.spring_security;
+package com.olympiabiddle.mwu;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

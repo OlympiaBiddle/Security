@@ -1,9 +1,9 @@
-package com.demo.spring_security.repository;
+package com.olympiabiddle.mwu.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.demo.spring_security.model.Product;
+import com.olympiabiddle.mwu.model.Product;
 
 
 @Repository

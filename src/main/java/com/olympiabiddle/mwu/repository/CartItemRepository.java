@@ -1,13 +1,14 @@
-package com.demo.spring_security.repository;
+package com.olympiabiddle.mwu.repository;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
-import com.demo.spring_security.model.CartItem;
-import com.demo.spring_security.model.Product;
-import com.demo.spring_security.model.User;
+
+import com.olympiabiddle.mwu.model.CartItem;
+import com.olympiabiddle.mwu.model.Product;
+import com.olympiabiddle.mwu.model.User;
 
 
 public interface CartItemRepository extends CrudRepository<CartItem, Integer>{

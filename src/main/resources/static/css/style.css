@@ -682,11 +682,18 @@ section{
    width: 100%;
 }
 
+.form-container form small{
+   margin-top: 1.5rem;
+   font-size: 2rem;
+   color:var(--light-color);
+}
+
 .form-container form p{
    margin-top: 1.5rem;
    font-size: 2rem;
    color:var(--light-color);
 }
+
 
 .form-container form p a{
    font-size: 2rem;

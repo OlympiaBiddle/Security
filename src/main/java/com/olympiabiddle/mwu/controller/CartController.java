@@ -1,4 +1,4 @@
-package com.demo.spring_security.controller;
+package com.olympiabiddle.mwu.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.demo.spring_security.model.CartItem;
-import com.demo.spring_security.model.Product;
-import com.demo.spring_security.service.CartService;
-import com.demo.spring_security.service.UserService;
+import com.olympiabiddle.mwu.model.CartItem;
+import com.olympiabiddle.mwu.model.Product;
+import com.olympiabiddle.mwu.service.CartService;
+import com.olympiabiddle.mwu.service.UserService;
 
 @Controller
 public class CartController {

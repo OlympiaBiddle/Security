@@ -1,8 +1,8 @@
-package com.demo.spring_security.repository;
+package com.olympiabiddle.mwu.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.demo.spring_security.model.User;
+import com.olympiabiddle.mwu.model.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 	  User findByEmail(String email);

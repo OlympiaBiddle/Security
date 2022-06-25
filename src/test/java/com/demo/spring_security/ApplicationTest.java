@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.demo.spring_security.controller.UserRegistrationController;
-import com.demo.spring_security.model.User;
-import com.demo.spring_security.service.UserServiceImpl;
+import com.olympiabiddle.mwu.controller.UserRegistrationController;
+import com.olympiabiddle.mwu.model.User;
+import com.olympiabiddle.mwu.service.UserServiceImpl;
 
 @SpringBootTest
 public class ApplicationTest {

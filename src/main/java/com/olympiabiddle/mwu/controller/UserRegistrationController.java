@@ -1,4 +1,4 @@
-package com.demo.spring_security.controller;
+package com.olympiabiddle.mwu.controller;
 
 import javax.validation.Valid;
 
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.demo.spring_security.model.User;
-import com.demo.spring_security.service.UserService;
+import com.olympiabiddle.mwu.model.User;
+import com.olympiabiddle.mwu.service.UserService;
 
 @Controller
 @RequestMapping("/registration")

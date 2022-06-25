@@ -1,12 +1,12 @@
-package com.demo.spring_security.service;
+package com.olympiabiddle.mwu.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.demo.spring_security.model.CartItem;
-import com.demo.spring_security.model.Product;
-import com.demo.spring_security.model.User;
-import com.demo.spring_security.repository.CartItemRepository;
+import com.olympiabiddle.mwu.model.CartItem;
+import com.olympiabiddle.mwu.model.Product;
+import com.olympiabiddle.mwu.model.User;
+import com.olympiabiddle.mwu.repository.CartItemRepository;
 
 @Service
 public class CartService {

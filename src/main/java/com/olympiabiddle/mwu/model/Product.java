@@ -1,4 +1,4 @@
-package com.demo.spring_security.model;
+package com.olympiabiddle.mwu.model;
 
 import java.util.Objects;
 

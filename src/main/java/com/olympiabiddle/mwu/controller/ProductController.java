@@ -1,4 +1,4 @@
-package com.demo.spring_security.controller;
+package com.olympiabiddle.mwu.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,7 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import com.demo.spring_security.service.ProductService;
+
+import com.olympiabiddle.mwu.service.ProductService;
 
 @Controller
 public class ProductController {

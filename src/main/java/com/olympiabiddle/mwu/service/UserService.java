@@ -1,9 +1,9 @@
-package com.demo.spring_security.service;
+package com.olympiabiddle.mwu.service;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
 
-import com.demo.spring_security.controller.UserRegistrationDto;
-import com.demo.spring_security.model.User;
+import com.olympiabiddle.mwu.controller.UserRegistrationDto;
+import com.olympiabiddle.mwu.model.User;
 
 public interface UserService extends UserDetailsService {
    User findByEmail(String email);

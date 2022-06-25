@@ -10,9 +10,9 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.Rollback;
 
-import com.demo.spring_security.model.User;
-import com.demo.spring_security.repository.UserRepository;
-import com.demo.spring_security.service.UserService;
+import com.olympiabiddle.mwu.model.User;
+import com.olympiabiddle.mwu.repository.UserRepository;
+import com.olympiabiddle.mwu.service.UserService;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = Replace.NONE)

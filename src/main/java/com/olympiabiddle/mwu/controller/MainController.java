@@ -1,4 +1,4 @@
-package com.demo.spring_security.controller;
+package com.olympiabiddle.mwu.controller;
 
 
 
@@ -12,8 +12,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.demo.spring_security.model.User;
-import com.demo.spring_security.service.UserService;
+import com.olympiabiddle.mwu.model.User;
+import com.olympiabiddle.mwu.service.UserService;
 
 @Controller
 public class MainController {
